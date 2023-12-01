@@ -13,28 +13,7 @@ Postgresql is used as the database management system. This provides a few advant
 
 * Cleaner code and scalable application
 
-#### Connecting to Database
-Create database with name, giving access to user with password and make the respective changes within the 'project_planner/settings.py' file in the 'DATABASES' variable as follows:
 
-	DATABASES = {
-	    'default': {
-	        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	        'NAME': 'project_planner',
-	        'USER': 'project_planner_user',
-	        'PASSWORD': 'project_planner_pass',
-	        'HOST': 'localhost',
-	        'PORT': '5432',
-	    }
-	}
-
-Host and port values may differ based on your local machine.
-Once completed you are ready to run model migrations. Cd over to the root directory and run:
-
-	python3 manage.py migrate 
-This should create the necessary tables and relations between our models according to the specified schema , Finally to get the server up, run :
-
-	python3 manage.py runserver
-Now you can start using the APIs.
 
 ### APIs
 The application's default port is 8000 and every route should be preceded by "http://localhost:8000/"
